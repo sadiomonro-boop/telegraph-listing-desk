@@ -1,0 +1,7 @@
+node_modules/
+out/
+.env
+*.local
+wallet.json
+.telegraph/
+.DS_Store

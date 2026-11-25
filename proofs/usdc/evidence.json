@@ -1,0 +1,443 @@
+{
+  "kind": "listing-risk-memo",
+  "network": "Ethereum Sepolia (testnet)",
+  "token": {
+    "contract": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    "chain": "ethereum",
+    "symbol": "USDC",
+    "project": "USD Coin"
+  },
+  "verdict": "REVIEW",
+  "riskScore": 50,
+  "critical": null,
+  "rulesFired": [
+    {
+      "points": 10,
+      "rule": "upgradeable proxy contract (owner can change logic)"
+    },
+    {
+      "points": 15,
+      "rule": "top-10 holders own 23% of supply"
+    },
+    {
+      "points": 5,
+      "rule": "bot detection inconclusive (no usable signal)"
+    },
+    {
+      "points": 20,
+      "rule": "code review flags a correctness or security weakness"
+    }
+  ],
+  "findings": [
+    {
+      "key": "audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "label": "Contract audit",
+      "miner": {
+        "id": "200001",
+        "slug": "goplus-security",
+        "name": "GoPlus Security (id 200001)",
+        "rank": 6,
+        "score": 0
+      },
+      "receiptHash": "0xa535e8d17b68e44eadece8e73172c100ab7c570efc16ee3af772b356048d285b",
+      "receipt": {
+        "receipt_hash": "0xa535e8d17b68e44eadece8e73172c100ab7c570efc16ee3af772b356048d285b",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "4819",
+        "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586248
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 2501,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "goplus-security",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "audit row keyed by queried contract address"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xa535e8d17b68e44eadece8e73172c100ab7c570efc16ee3af772b356048d285b",
+          "ms": 2501
+        }
+      ],
+      "answer": {
+        "code": 1,
+        "message": "OK",
+        "result": {
+          "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48": {
+            "buy_tax": "0",
+            "cannot_buy": "0",
+            "creator_address": "0x95ba4cf87d6723ad9c0db21737d862be80e93911",
+            "creator_balance": "2505.454092",
+            "creator_percent": "0.000000",
+            "holder_count": "9479134",
+            "holders": [
+              {
+                "address": "0x37305b1cd40574e4c5ce33f8e8306be057fd7341",
+                "balance": "1861988304.590402",
+                "is_contract": 0,
+                "is_locked": 0,
+                "percent": "0.041995605158475142",
+                "tag": ""
+              },
+              {
+                "address": "0xffa69c0080582098af595156240214b742735a5e",
+                "balance": "1482999999.8601",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.033447837610260188",
+                "tag": ""
+              },
+              {
+                "address": "0xad354cfbaa4a8572dd6df021514a3931a8329ef5",
+                "balance": "1400000000.5201",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.031575841319068067",
+                "tag": ""
+              },
+              {
+                "address": "0x40ec5b33f54e0e8a33a975908c5ba1c14e5bbbdf",
+                "balance": "1056542959.049719",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.023829452006670614",
+                "tag": ""
+              },
+              {
+                "address": "0xe20d20b0cc4e44cd23d5b0488d5250a9ac426875",
+                "balance": "1000000000.395477",
+                "is_contract": 0,
+                "is_locked": 0,
+                "percent": "0.022554172371303686",
+                "tag": ""
+              },
+              {
+                "address": "0x98c23e9d8f34fefb1b7bd6a91b7ff122f4e16f5c",
+                "balance": "919052461.868957",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.020728467635065832",
+                "tag": ""
+              },
+              {
+                "address": "0x5227f603c1ee34ce3c06efe6477003bdfccb2f8c",
+                "balance": "823000000",
+                "is_contract": 0,
+                "is_locked": 0,
+                "percent": "0.018562083854242056",
+                "tag": ""
+              },
+              {
+                "address": "0x08f619716db7c6245401b543e59acac1d25cb483",
+                "balance": "534945321.304658",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.012065248981156162",
+                "tag": ""
+              },
+              {
+                "address": "0x3b4d794a66304f130a4db8f2551b0070dfcf5ca7",
+                "balance": "477426160.512093",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.010767951914500969",
+                "tag": ""
+              },
+              {
+                "address": "0x36db199f0a1cd131ad0b5cf4fe94286faab9fda5",
+                "balance": "477372778.834026",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.010766747934932853",
+                "tag": ""
+              }
+            ],
+            "honeypot_with_same_creator": "0",
+            "is_honeypot": "0",
+            "is_in_cex": {
+              "cex_list": [
+                "Binance",
+                "Coinbase"
+              ],
+              "listed": "1"
+            },
+            "is_in_dex": "1",
+            "is_open_source": "1",
+            "is_proxy": "1",
+            "sell_tax": "0",
+            "token_name": "USD Coin",
+            "token_symbol": "USDC",
+            "total_supply": "44337694326.917771",
+            "transfer_tax": "",
+            "trust_list": "1"
+          }
+        }
+      }
+    },
+    {
+      "key": "holder",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "label": "Holder concentration",
+      "miner": {
+        "id": "4433",
+        "slug": "livecert",
+        "name": "LiveCert — Sourced Answers for Agents (id 4433)",
+        "rank": 1,
+        "score": 0.816
+      },
+      "receiptHash": "0xe85930999bc3e479b0b16fe50d21ebf5808af398441e2307ae10a98b0b6d13fe",
+      "receipt": {
+        "receipt_hash": "0xe85930999bc3e479b0b16fe50d21ebf5808af398441e2307ae10a98b0b6d13fe",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "6126",
+        "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586249
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 3252,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "livecert",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "holders_count=9635800"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xe85930999bc3e479b0b16fe50d21ebf5808af398441e2307ae10a98b0b6d13fe",
+          "ms": 3252
+        }
+      ],
+      "answer": {
+        "token": null,
+        "chain": null,
+        "holders_count": 9635800,
+        "token_symbol": null
+      }
+    },
+    {
+      "key": "sanctions",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "label": "Sanctions screening",
+      "miner": {
+        "id": "710637",
+        "slug": "zk-sanctions",
+        "name": "Sanctions Name Evidence (id 710637)",
+        "rank": 3,
+        "score": 1
+      },
+      "receiptHash": "0x3d81cea3054f3a7d75675e8960711b3190b2da100ceda23e4b9cd5658bb287b1",
+      "receipt": {
+        "receipt_hash": "0x3d81cea3054f3a7d75675e8960711b3190b2da100ceda23e4b9cd5658bb287b1",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "4860",
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586256
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 10755,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "zk-sanctions",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "screened \"Circle Internet Financial\", matched=false"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0x3d81cea3054f3a7d75675e8960711b3190b2da100ceda23e4b9cd5658bb287b1",
+          "ms": 10755
+        }
+      ],
+      "answer": {
+        "name": "Circle Internet Financial",
+        "matched": false,
+        "matches": null,
+        "lists": [
+          "OFAC SDN",
+          "OFAC Consolidated (non-SDN)",
+          "UK Sanctions List (entities only)",
+          "Canada autonomous sanctions (entities only)",
+          "EU Financial Sanctions (entities only)",
+          "US BIS Entity List (export controls)",
+          "US BIS Military End User List (export controls)",
+          "US BIS Denied Persons List (dated standard export-denial orders)",
+          "UK Sanctions List (ships)",
+          "US BIS Entity List (additional primary-row corroborated records)",
+          "Canada autonomous sanctions (November 5 additional entities)",
+          "Canada autonomous sanctions (corroborated ships)",
+          "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+        ],
+        "match_score": 0
+      }
+    },
+    {
+      "key": "social",
+      "intent": "SOCIAL_BOT_DETECTION_GENERAL",
+      "label": "Social bot detection",
+      "miner": {
+        "id": "7457",
+        "slug": "tradewire-social-bot-detection",
+        "name": "TradeWire Social Bot Detection (id 7457)",
+        "rank": 5,
+        "score": 0.9673
+      },
+      "receiptHash": "0xb4a2893066b08fb964765f883aab4216ad6b518428c4301ac4ce6269bf2c9490",
+      "receipt": {
+        "receipt_hash": "0xb4a2893066b08fb964765f883aab4216ad6b518428c4301ac4ce6269bf2c9490",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "4494",
+        "intent": "SOCIAL_BOT_DETECTION_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586252
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 6335,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "tradewire-social-bot-detection",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "verdict=inconclusive for @circle"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xb4a2893066b08fb964765f883aab4216ad6b518428c4301ac4ce6269bf2c9490",
+          "ms": 6335
+        }
+      ],
+      "answer": {
+        "account": "@circle",
+        "verdict": "inconclusive",
+        "bot_score": null,
+        "signals": null
+      }
+    },
+    {
+      "key": "code",
+      "intent": "CODE_REVIEW_GENERAL",
+      "label": "Code review",
+      "miner": {
+        "id": "7310045",
+        "slug": "zk-codereview",
+        "name": "CodeWire Code Review Request Contract (id 7310045)",
+        "rank": 5,
+        "score": 1
+      },
+      "receiptHash": "0xd936a3db8dbc41d561cd28b54f16dbf261e8fbb1c32a3c1062905e18ffbd870d",
+      "receipt": {
+        "receipt_hash": "0xd936a3db8dbc41d561cd28b54f16dbf261e8fbb1c32a3c1062905e18ffbd870d",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "5035",
+        "intent": "CODE_REVIEW_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586306
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 55065,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "codewire-code-review",
+          "attempt": 1,
+          "ok": false,
+          "onTarget": null,
+          "reasons": [],
+          "error": "node 503 could not route this question now, try again later",
+          "costUsd": null,
+          "receiptHash": null,
+          "ms": 3966
+        },
+        {
+          "miner": "codewire-code-review",
+          "attempt": 2,
+          "ok": false,
+          "onTarget": null,
+          "reasons": [],
+          "error": "node 503 could not route this question now, try again later",
+          "costUsd": null,
+          "receiptHash": null,
+          "ms": 1440
+        },
+        {
+          "miner": "zk-codereview",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "review summary present"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xd936a3db8dbc41d561cd28b54f16dbf261e8fbb1c32a3c1062905e18ffbd870d",
+          "ms": 55065
+        }
+      ],
+      "answer": {
+        "verdict": "Request changes",
+        "findings": [
+          "The mint and burn flows are implemented correctly, but the blacklist function is incomplete and the transfer function bypasses the blacklist logic.",
+          "The `transfer` function uses `_transfer` directly and returns `true` unconditionally. If `blacklisted` is intended to prevent blacklisted addresses from transferring tokens, this implementation does not enforce that rule. A blacklisted account can still transfer tokens, and a blacklisted recipient can still receive tokens.",
+          "The `blacklist` function has a correctness issue because it only sets `blacklisted[account] = true`; there is no corresponding unblacklist function or other mechanism to revoke a blacklist entry.",
+          "The `blacklist` function also lacks input validation. It permits the zero address to be blacklisted and permits duplicate calls, which may be harmless depending on the intended policy, but it should either reject the zero address or document that blacklisting it is valid.",
+          "The `transfer` function has a possible integration issue with ERC-20 override rules.",
+          "The `transfer` function can also return `true` even if the inherited token implementation changes `_transfer` to return a status value.",
+          "The `mint` function correctly applies `onlyOwner` and uses `_mint(to, amount)`, which increases the recipient’s balance and updates total supply under standard ERC-20 behavior.",
+          "The `burn` function correctly burns tokens from `msg.sender`; callers must approve the contract if the token uses allowance-based burning in a separate function.",
+          "There is no obvious performance problem in these functions.",
+          "Clarity would improve if the code documented the blacklist policy directly in the contract."
+        ],
+        "summary": "The code is not fully correct. The mint and burn flows are implemented correctly, but the blacklist function is incomplete and the transfer function bypasses the blacklist logic."
+      }
+    }
+  ],
+  "totalCostUsdc": 0.05,
+  "run": {
+    "startedAt": "2026-11-25T05:57:14.608Z",
+    "finishedAt": "2026-11-25T05:58:27.456Z",
+    "version": "1.0.0",
+    "mode": "memo",
+    "escrowBeforeUsdc": 4.74,
+    "escrowAfterUsdc": 4.69
+  },
+  "verificationHash": "000e913306708ae99f4d3a06222aa1be282160d7374943477ca4b3726053d363"
+}

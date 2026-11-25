@@ -1,0 +1,25 @@
+{
+  "kind": "listing-risk-memo",
+  "network": "Ethereum Sepolia (testnet)",
+  "token": {
+    "contract": "0x1234",
+    "chain": "ethereum",
+    "project": "Fake"
+  },
+  "verdict": "INCONCLUSIVE",
+  "riskScore": null,
+  "critical": null,
+  "rulesFired": [],
+  "failure": {
+    "reason": "Invalid listing application: contractAddress \"0x1234\" is not a valid EVM address",
+    "attempts": []
+  },
+  "totalCostUsdc": 0,
+  "run": {
+    "startedAt": "2026-11-25T05:55:19.521Z",
+    "finishedAt": "2026-11-25T05:55:19.522Z",
+    "version": "1.0.0",
+    "mode": "memo"
+  },
+  "verificationHash": "dc01ba8f68040c2d9a0bcc94f1fe15c2f5a788c645b3be42150a6b80774f8a79"
+}

@@ -1,0 +1,454 @@
+{
+  "kind": "listing-risk-memo",
+  "network": "Ethereum Sepolia (testnet)",
+  "token": {
+    "contract": "0x6b175474e89094c44da98b954eedeac495271d0f",
+    "chain": "ethereum",
+    "symbol": "DAI",
+    "project": "Dai Stablecoin"
+  },
+  "verdict": "REVIEW",
+  "riskScore": 40,
+  "critical": null,
+  "rulesFired": [
+    {
+      "points": 15,
+      "rule": "top-10 holders own 38% of supply"
+    },
+    {
+      "points": 5,
+      "rule": "bot detection inconclusive (no usable signal)"
+    },
+    {
+      "points": 20,
+      "rule": "code review flags a correctness or security weakness"
+    }
+  ],
+  "findings": [
+    {
+      "key": "audit",
+      "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+      "label": "Contract audit",
+      "miner": {
+        "id": "200001",
+        "slug": "goplus-security",
+        "name": "GoPlus Security (id 200001)",
+        "rank": 6,
+        "score": 0
+      },
+      "receiptHash": "0x142fd23ef4a9cd847fecf0f301c880fcf9ec680492db07092f1793780f047574",
+      "receipt": {
+        "receipt_hash": "0x142fd23ef4a9cd847fecf0f301c880fcf9ec680492db07092f1793780f047574",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "4819",
+        "intent": "SMART_CONTRACT_AUDIT_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586320
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 2814,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "goplus-security",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "audit row keyed by queried contract address"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0x142fd23ef4a9cd847fecf0f301c880fcf9ec680492db07092f1793780f047574",
+          "ms": 2814
+        }
+      ],
+      "answer": {
+        "code": 1,
+        "message": "OK",
+        "result": {
+          "0x6b175474e89094c44da98b954eedeac495271d0f": {
+            "anti_whale_modifiable": "0",
+            "buy_tax": "0",
+            "can_take_back_ownership": "0",
+            "cannot_buy": "0",
+            "creator_address": "0xb5b06a16621616875a6c2637948bf98ea57c58fa",
+            "creator_balance": "0",
+            "creator_percent": "0.000000",
+            "external_call": "0",
+            "hidden_owner": "0",
+            "holder_count": "753846",
+            "holders": [
+              {
+                "address": "0xf6e72db5454dd049d0788e411b06cfaf16853042",
+                "balance": "795480787.498737270548465826",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.182482944008931748",
+                "tag": ""
+              },
+              {
+                "address": "0x40ec5b33f54e0e8a33a975908c5ba1c14e5bbbdf",
+                "balance": "432934415.74132500624411655",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.099314965224586519",
+                "tag": ""
+              },
+              {
+                "address": "0x250ba4e73a365cefdd170a2b1ff9fc03097d64f3",
+                "balance": "155000200",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.035556977946520325",
+                "tag": ""
+              },
+              {
+                "address": "0x8932fe7726c1ee743f662f485c3e5a5d1d595f71",
+                "balance": "51474901.324627116248062421",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.011808319803452358",
+                "tag": ""
+              },
+              {
+                "address": "0x4dedf26112b3ec8ec46e7e31ea5e123490b05b8b",
+                "balance": "51301109.203459244790773662",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.011768451967026050",
+                "tag": ""
+              },
+              {
+                "address": "0xf97d4744082ab5c5f4fe9774446702cc48ace1a2",
+                "balance": "49953025.516514146233573284",
+                "is_contract": 1,
+                "is_locked": 0,
+                "percent": "0.011459202160078894",
+                "tag": ""
+              },
+              {
+                "address": "0x837c20d568dfcd35e74e5cc0b8030f9cebe10a28",
+                "balance": "34315721.198137307345514896",
+                "is_contract": 0,
+                "is_locked": 0,
+                "percent": "0.007872011402960178",
+                "tag": ""
+              },
+              {
+                "address": "0xf84213cda40246be080bfa1744301b9e37ee4852",
+                "balance": "31992527.82",
+                "is_contract": 0,
+                "is_locked": 0,
+                "percent": "0.007339071860224554",
+                "tag": ""
+              },
+              {
+                "address": "0xc3548e0947796ae1ab7bf8ef275ab284283d4435",
+                "balance": "28712825.959950372952083575",
+                "is_contract": 0,
+                "is_locked": 0,
+                "percent": "0.006586709690956732",
+                "tag": ""
+              },
+              {
+                "address": "0x07ede94cf6316f4809f2b725f5d79ad303fb4dc8",
+                "balance": "28141187.223548885228552139",
+                "is_contract": 0,
+                "is_locked": 0,
+                "percent": "0.006455576015364027",
+                "tag": ""
+              }
+            ],
+            "honeypot_with_same_creator": "0",
+            "is_anti_whale": "0",
+            "is_blacklisted": "0",
+            "is_honeypot": "0",
+            "is_in_cex": {
+              "cex_list": [
+                "Binance",
+                "Coinbase"
+              ],
+              "listed": "1"
+            },
+            "is_in_dex": "1",
+            "is_mintable": "1",
+            "is_open_source": "1",
+            "is_proxy": "0",
+            "is_whitelisted": "0",
+            "owner_balance": "0",
+            "owner_change_balance": "0",
+            "owner_percent": "0",
+            "personal_slippage_modifiable": "0",
+            "selfdestruct": "0",
+            "sell_tax": "0",
+            "slippage_modifiable": "0",
+            "token_name": "Dai Stablecoin",
+            "token_symbol": "DAI",
+            "total_supply": "4359206236.06226967548703509",
+            "trading_cooldown": "0",
+            "transfer_pausable": "0",
+            "transfer_tax": "",
+            "trust_list": "1"
+          }
+        }
+      }
+    },
+    {
+      "key": "holder",
+      "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+      "label": "Holder concentration",
+      "miner": {
+        "id": "4433",
+        "slug": "livecert",
+        "name": "LiveCert — Sourced Answers for Agents (id 4433)",
+        "rank": 1,
+        "score": 0.816
+      },
+      "receiptHash": "0xe4483439d9487596c73e86c8b07e238c289cda48aa9c1c6bd6432e12384bfb5d",
+      "receipt": {
+        "receipt_hash": "0xe4483439d9487596c73e86c8b07e238c289cda48aa9c1c6bd6432e12384bfb5d",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "6126",
+        "intent": "TOKEN_HOLDER_COUNT_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586321
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 3394,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "livecert",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "holders_count=802475"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xe4483439d9487596c73e86c8b07e238c289cda48aa9c1c6bd6432e12384bfb5d",
+          "ms": 3394
+        }
+      ],
+      "answer": {
+        "token": null,
+        "chain": null,
+        "holders_count": 802475,
+        "token_symbol": null
+      }
+    },
+    {
+      "key": "sanctions",
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "label": "Sanctions screening",
+      "miner": {
+        "id": "710637",
+        "slug": "zk-sanctions",
+        "name": "Sanctions Name Evidence (id 710637)",
+        "rank": 3,
+        "score": 1
+      },
+      "receiptHash": "0xa84b3ca93cbb08ef240576580c46aa05b0d87bef57e2ef2ed6b9f61105812e2b",
+      "receipt": {
+        "receipt_hash": "0xa84b3ca93cbb08ef240576580c46aa05b0d87bef57e2ef2ed6b9f61105812e2b",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "4860",
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586327
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 9941,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "zk-sanctions",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "screened \"MakerDAO\", matched=false"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xa84b3ca93cbb08ef240576580c46aa05b0d87bef57e2ef2ed6b9f61105812e2b",
+          "ms": 9941
+        }
+      ],
+      "answer": {
+        "name": "MakerDAO",
+        "matched": false,
+        "matches": null,
+        "lists": [
+          "OFAC SDN",
+          "OFAC Consolidated (non-SDN)",
+          "UK Sanctions List (entities only)",
+          "Canada autonomous sanctions (entities only)",
+          "EU Financial Sanctions (entities only)",
+          "US BIS Entity List (export controls)",
+          "US BIS Military End User List (export controls)",
+          "US BIS Denied Persons List (dated standard export-denial orders)",
+          "UK Sanctions List (ships)",
+          "US BIS Entity List (additional primary-row corroborated records)",
+          "Canada autonomous sanctions (November 5 additional entities)",
+          "Canada autonomous sanctions (corroborated ships)",
+          "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+        ],
+        "match_score": 0
+      }
+    },
+    {
+      "key": "social",
+      "intent": "SOCIAL_BOT_DETECTION_GENERAL",
+      "label": "Social bot detection",
+      "miner": {
+        "id": "7457",
+        "slug": "tradewire-social-bot-detection",
+        "name": "TradeWire Social Bot Detection (id 7457)",
+        "rank": 5,
+        "score": 0.9673
+      },
+      "receiptHash": "0xb46a073b598ef85c4c11874842843f1b5b3dc098f87a2c0096396b5dbbf8ea22",
+      "receipt": {
+        "receipt_hash": "0xb46a073b598ef85c4c11874842843f1b5b3dc098f87a2c0096396b5dbbf8ea22",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "4494",
+        "intent": "SOCIAL_BOT_DETECTION_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586324
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 6388,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "tradewire-social-bot-detection",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "verdict=inconclusive for @MakerDAO"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xb46a073b598ef85c4c11874842843f1b5b3dc098f87a2c0096396b5dbbf8ea22",
+          "ms": 6388
+        }
+      ],
+      "answer": {
+        "account": "@MakerDAO",
+        "verdict": "inconclusive",
+        "bot_score": null,
+        "signals": null
+      }
+    },
+    {
+      "key": "code",
+      "intent": "CODE_REVIEW_GENERAL",
+      "label": "Code review",
+      "miner": {
+        "id": "7310045",
+        "slug": "zk-codereview",
+        "name": "CodeWire Code Review Request Contract (id 7310045)",
+        "rank": 5,
+        "score": 1
+      },
+      "receiptHash": "0xb1622796a31332bce49bc84d69bb31b87e12a98b1685073146a97229e08658a2",
+      "receipt": {
+        "receipt_hash": "0xb1622796a31332bce49bc84d69bb31b87e12a98b1685073146a97229e08658a2",
+        "rail": "escrow",
+        "payer": "0xc3de67071907ea861df12aabf6ac7807973fab4b",
+        "miner": "5035",
+        "intent": "CODE_REVIEW_GENERAL",
+        "amount_uusdc": "10000",
+        "epoch_id": 53,
+        "settlement": "epoch",
+        "chain": "telegraph",
+        "timestamp": 1795586346
+      },
+      "costUsdc": 0.01,
+      "latencyMs": 23246,
+      "warnings": [],
+      "attempts": [
+        {
+          "miner": "codewire-code-review",
+          "attempt": 1,
+          "ok": false,
+          "onTarget": null,
+          "reasons": [],
+          "error": "node 503 could not route this question now, try again later",
+          "costUsd": null,
+          "receiptHash": null,
+          "ms": 4224
+        },
+        {
+          "miner": "codewire-code-review",
+          "attempt": 2,
+          "ok": false,
+          "onTarget": null,
+          "reasons": [],
+          "error": "node 503 could not route this question now, try again later",
+          "costUsd": null,
+          "receiptHash": null,
+          "ms": 1523
+        },
+        {
+          "miner": "zk-codereview",
+          "attempt": 1,
+          "ok": true,
+          "onTarget": true,
+          "reasons": [
+            "review summary present"
+          ],
+          "error": null,
+          "costUsd": 0.01,
+          "receiptHash": "0xb1622796a31332bce49bc84d69bb31b87e12a98b1685073146a97229e08658a2",
+          "ms": 23246
+        }
+      ],
+      "answer": {
+        "verdict": null,
+        "findings": [
+          "The code is not correct as written.",
+          "`burn` has a missing authorization check.",
+          "`transfer` has an incorrect external interface.",
+          "The contract relies on `add` and `sub`, which are likely internal arithmetic helpers.",
+          "There is no zero-address validation for `usr` or `dst`.",
+          "The `supply` accounting is only correct if every balance mutation is paired with exactly one matching `supply` mutation and no other code changes `dai` without adjusting `supply`.",
+          "The code provides no event emissions for minting, burning, or transfers.",
+          "The function signatures also use a lowercase `dai` identifier for storage, while `usr` and `wad` are untyped semantically beyond their Solidity types.",
+          "Finally, the code does not show the definitions of `auth`, `transferFrom`, `add`, `sub`, or the `dai` and `supply` state variables."
+        ],
+        "summary": "The code is not correct as written."
+      }
+    }
+  ],
+  "totalCostUsdc": 0.05,
+  "run": {
+    "startedAt": "2026-11-25T05:58:28.429Z",
+    "finishedAt": "2026-11-25T05:59:07.573Z",
+    "version": "1.0.0",
+    "mode": "memo",
+    "escrowBeforeUsdc": 4.69,
+    "escrowAfterUsdc": 4.64
+  },
+  "verificationHash": "f59415aa898addd96aea00ba52024163cbd68fe9158cbe2dce612ed26b008429"
+}

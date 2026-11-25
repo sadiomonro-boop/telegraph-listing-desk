@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Telegraph Listing Desk — Demo (Testnet)</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, sans-serif; max-width: 860px; margin: 2rem auto; padding: 0 1rem; line-height: 1.55; }
+  .banner { background: #fff3cd; color: #664d03; border: 1px solid #ffecb5; padding: .75rem 1rem; border-radius: 8px; }
+  @media (prefers-color-scheme: dark) { .banner { background: #332e00; color: #ffe69c; border-color: #665c00; } }
+  .verdict { font-size: 1.6rem; font-weight: 700; }
+  .review { color: #b45309; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ccc; padding: .45rem .6rem; text-align: left; font-size: .92rem; }
+  code { font-size: .88em; overflow-wrap: anywhere; }
+  pre { background: #f4f4f4; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: .85rem; }
+  @media (prefers-color-scheme: dark) { pre { background: #222; } th, td { border-color: #555; } }
+  .muted { color: #666; font-size: .9rem; }
+  @media (prefers-color-scheme: dark) { .muted { color: #aaa; } }
+</style>
+</head>
+<body>
+<p class="banner"><strong>Testnet demo.</strong> Every figure on this page comes from real paid
+asks on Ethereum Sepolia with Telegraph test USDC — no mainnet, no real money.
+Sample memo generated 25 Nov 2026 by
+<a href="https://github.com/sadiomonro-boop/telegraph-listing-desk">telegraph-listing-desk</a>.</p>
+
+<h1>Telegraph Listing Desk</h1>
+<p>An autonomous listings desk for Mission 01 Exchange: one command buys risk
+intelligence through Telegraph and composes a signed listing risk memo.</p>
+
+<h2>Sample memo — USD Coin (USDC)</h2>
+<p><span class="verdict review">REVIEW — risk score 50/100</span></p>
+<p>Token <code>0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48</code> on ethereum.
+Application: USD Coin, X <code>@circle</code>, legal name Circle Internet Financial.</p>
+
+<table>
+  <tr><th>Check</th><th>Miner (rank)</th><th>Result</th><th>Receipt hash</th><th>Cost</th></tr>
+  <tr><td>Contract audit</td><td>GoPlus Security (rank 6)</td><td>honeypot 0, proxy 1, tax 0%/0%, 9,479,134 holders</td><td><code>0xa535e8d1…</code></td><td>0.01</td></tr>
+  <tr><td>Holder concentration</td><td>LiveCert (rank 1)</td><td>9,635,800 holders</td><td><code>0xe8593099…</code></td><td>0.01</td></tr>
+  <tr><td>Sanctions screening</td><td>Sanctions Name Evidence (rank 3)</td><td>no match (score 0), 13 lists checked</td><td><code>0x3d81cea3…</code></td><td>0.01</td></tr>
+  <tr><td>Social bot detection</td><td>TradeWire (rank 5)</td><td>verdict inconclusive</td><td><code>0xb4a28930…</code></td><td>0.01</td></tr>
+  <tr><td>Code review</td><td>zk-codereview (rank 5, fallback)</td><td>blacklist written but never enforced</td><td><code>0xd936a3db…</code></td><td>0.01</td></tr>
+</table>
+
+<h3>Risk rules fired</h3>
+<ul>
+  <li>(+10) upgradeable proxy contract (owner can change logic)</li>
+  <li>(+15) top-10 holders own 23% of supply</li>
+  <li>(+5) bot detection inconclusive (no usable signal)</li>
+  <li>(+20) code review flags a correctness or security weakness</li>
+</ul>
+
+<p><strong>Total cost: 0.05 test USDC</strong> (Telegraph escrow, Sepolia testnet).</p>
+<p><strong>Verification hash</strong> (SHA-256 over the memo JSON body):
+<code>000e913306708ae99f4d3a06222aa1be282160d7374943477ca4b3726053d363</code></p>
+<p class="muted">Full memo and machine-readable evidence:
+<code>proofs/usdc/memo.md</code> and <code>proofs/usdc/evidence.json</code> in the
+repo. A second memo (Dai Stablecoin — REVIEW, 40/100, 0.05 test USDC) is in
+<code>proofs/dai/</code>. The code-review miner fell back twice (CodeWire
+returned HTTP 503) before zk-codereview answered — the fallback trail is in
+the evidence file.</p>
+
+<h2>How to run it</h2>
+<pre><code>git clone https://github.com/sadiomonro-boop/telegraph-listing-desk.git
+cd telegraph-listing-desk
+npm install
+export TELEGRAPH_PRIVATE_KEY=0x...   # throwaway wallet, Sepolia testnet only
+node src/cli.js --input examples/usdc.json --out out/usdc</code></pre>
+<p>Expected: <code>REVIEW — risk 50/100 — 0.05 test USDC — 5 intents — memo: out/usdc/memo.md</code></p>
+<p class="muted">Caps: $0.50 per ask, $5 per day. One memo costs 0.05 test USDC.
+Failed asks are never billed. An invalid application, or an intent that cannot
+be bought after all fallbacks, produces an INCONCLUSIVE memo and exit code 1 —
+never a fake success. Sniper mode (pre-trade BUY / NO-BUY) is included but
+currently unproven: no live miner returns a usable wash-trading verdict for an
+address-only query — see the README.</p>
+
+<p><a href="https://github.com/sadiomonro-boop/telegraph-listing-desk">GitHub repo</a> ·
+<a href="https://hackathon.telegraphprotocol.com/missions/exchange">Mission 01 Exchange</a> ·
+<a href="https://docs.telegraphprotocol.com/">Telegraph docs</a></p>
+</body>
+</html>
